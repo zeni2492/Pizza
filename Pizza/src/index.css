@@ -1,0 +1,161 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    --primary: #da2f04;
+    --secondary: #33670a;
+    color-scheme: light dark;
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.App {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header {
+    width: 400px;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.past-orders {
+    min-height: 650px;
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    border: 1px solid #dddddd;
+}
+
+thead tr {
+    background-color: var(--secondary);
+    color: #ffffff;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(odd) {
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #84ff65;
+    color: #000;
+}
+
+tbody tr:nth-of-type(even) {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #ccffa5;
+    color: #000;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid var(--secondary);
+}
+
+.PizzaContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 120px auto;
+    display: flex;
+}
+
+.PizzaContainer__pizzaOfTheDay {
+    margin-top: 22px;
+}
+
+.PizzaContainer__pizza {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.PizzaContainer__order,
+.pizza__image,
+.pizzaOfTheDay__image {
+    max-width: 400px;
+}
+
+.order {
+    height: auto;
+    max-height: 600px;
+    width: 420px;
+    overflow-y: scroll;
+}
+
+@media screen and (max-width: 768px) {
+    .PizzaContainer {
+        flex-direction: column;
+        overflow-y: scroll;
+        width: 300px;
+    }
+    .PizzaContainer__order,
+    .pizza__image,
+    .pizzaOfTheDay__image {
+        max-width: 280px;
+    }
+    .header {
+        width: 300px;
+    }
+
+    .order {
+        text-align: center;
+        width: 300px;
+    }
+
+    .orderContainer {
+        width: 300px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+}

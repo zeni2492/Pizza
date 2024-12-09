@@ -1,0 +1,13 @@
+.PizzaInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.PizzaInfo img {
+    max-width: 400px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
